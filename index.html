@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Log In</title>
+        <link href="login.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    </head>
+    <body>
+        
+        <!-- Form structure -->
+        <form class="login">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="Username">
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Email">
+                
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="password" class="form-control" placeholder="Password">
+                
+            </div>
+
+            <div class="test_div"></div>
+            
+            <div id="show"></div>
+
+            <button type="button" class="btn btn-success" id="btn">Sign Up</button>
+        </form>
+
+       
+        <!-- ajax code -->
+        
+        <script src="jquery-3.6.0.min.js"></script>
+
+        <script>
+            $(function()
+            {
+                $("#btn").on("click", function(){
+                    $.ajax({
+                        method: "post",
+                        url: "users.json",
+                        data: {"username":"leo"},
+
+                        success: function(data)
+                        {
+                            console.log(data[0]);
+                        }
+                    })
+
+                    
+                })
+            });
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.video {
+    width: 100%;
+}
+
+.c-video{
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+}
+
+.c-video:hover .controls{
+    transform: translateY(0);
+}
+
+.controls{
+    display: flex;
+    position: absolute;
+    bottom: 3px;
+    width: 100%;
+    flex-wrap: wrap;
+    background: rgba(13, 110, 253, 0.7);
+    transform: translateY(100%) translateY(-2px);
+    transition: all 0.4s;
+}
+
+.progress{
+    height: 7px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+}
+
+.progress_filled{
+    height: 7px;
+    width: 0%;
+    background-color: #dc3545;
+}
+
+.buttons
+{
+    padding: 5px;
+}
+
+.buttons button{
+    background: none;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+
+}
+
+.buttons button::before{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    color: #fff;
+}
